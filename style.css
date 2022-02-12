@@ -4,8 +4,6 @@ body {
   margin: 0px;
   padding: 0px;
   color: white;
-  position: relative;
-  scroll-behavior: smooth;
 }
 /* Navbar Styling */
 ul,
@@ -39,12 +37,38 @@ li a {
   right: 0px;
   top: 0px;
 }
+/* Animated Navbar */
+.animated-navbar {
+  animation: animation-navbar 1s;
+}
 /* SCROLLED NAVBAR STYLING  */
 .scrolled-navbar {
   position: fixed;
   box-shadow: 0px 3px 20px rgb(0, 0, 0);
-  background-color: rgba(109, 109, 109, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
+}
+.blacktext {
+  color: black;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 6px 0px 10px #666666, -6px 0px 10px #ffffff;
+  animation: opacity 300ms;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animation-navbar {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 /* Finished Navbar Styling */
 /* Header Styling */
