@@ -374,7 +374,14 @@ section {
     );
   }
 }
-
+/* orange waves */
+.orange-waves {
+  position: absolute;
+  left: -2%;
+  width: 100vw;
+  bottom: -20%;
+  z-index: -1;
+}
 /* Animation for button */
 @keyframes buttonUpDown {
   0% {
