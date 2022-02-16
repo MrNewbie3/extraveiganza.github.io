@@ -4,6 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   color: white;
+  overflow-x: hidden;
 }
 /* Navbar Styling */
 ul,
@@ -377,7 +378,7 @@ section {
 /* orange waves */
 .orange-waves {
   position: absolute;
-  left: -2%;
+  left: -1%;
   width: 100vw;
   bottom: -20%;
   z-index: -1;
