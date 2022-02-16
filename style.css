@@ -204,6 +204,30 @@ section {
   height: auto;
   position: relative;
   margin-top: -5px;
+  height: 100vh;
+}
+.text-center {
+  text-align: center;
+}
+.column {
+  padding-top: 70px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: end;
+}
+.text-buaul {
+  text-align: left;
+}
+
+.foto-bu-aul {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.text-buaul {
+  grid-area: 1 / 1 / 2 / 2;
 }
 /* svg Waves */
 .waves-1 {
