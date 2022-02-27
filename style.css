@@ -187,7 +187,6 @@ section {
   grid-row-gap: 0px;
   text-align: center;
 }
-
 .logo-image {
   grid-area: 1 / 1 / 2 / 4;
 }
@@ -223,12 +222,18 @@ section {
 .text-buaul {
   text-align: left;
 }
-
 .foto-bu-aul {
   grid-area: 1 / 2 / 2 / 3;
 }
 .text-buaul {
   grid-area: 1 / 1 / 2 / 2;
+}
+/* Member Classes Section */
+.member {
+  margin-top: 150px;
+}
+.member h1.text-center {
+  font-size: 50px;
 }
 /* svg Waves */
 .waves-1 {
@@ -239,9 +244,7 @@ section {
   z-index: -1;
 }
 .path-2 {
-  animation: pathAnim-1 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: pathAnim-1 4s linear infinite;
 }
 @keyframes pathAnim-1 {
   0% {
@@ -271,9 +274,7 @@ section {
   }
 }
 .path-3 {
-  animation: pathAnim-0 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: pathAnim-0 4s linear infinite;
 }
 @keyframes pathAnim-0 {
   0% {
@@ -312,9 +313,7 @@ section {
   z-index: -1;
 }
 .path-0 {
-  animation: pathAnim-0 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: pathAnim-0 4s linear infinite;
 }
 @keyframes pathAnim-0 {
   0% {
@@ -344,9 +343,7 @@ section {
   }
 }
 .path-1 {
-  animation: pathAnim-1 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: pathAnim-1 4s linear infinite;
 }
 @keyframes pathAnim-1 {
   0% {
@@ -378,8 +375,9 @@ section {
 /* orange waves */
 .orange-waves {
   position: absolute;
-  left: -1%;
-  width: 100vw;
+  left: -7%;
+  width: 110vw;
+  height: 400px;
   bottom: -20%;
   z-index: -1;
 }
