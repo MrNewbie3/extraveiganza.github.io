@@ -235,21 +235,58 @@
         <div class="card3 cardname"></div>
       </div>
     </section>
+    <section class="forms">
+      <form action="" name="feedback-Users">
+        <input type="text" placeholder="Name" name="nama" />
+        <input type="email" placeholder="Email" name="email" /><br />
+        <textarea name="text" id="message" cols="30" rows="10" placeholder="Message" name="pesan"></textarea><br />
+        <button type="submit" class="kirim">Submit</button>
+        <button disabled="disabled" class="loading disable">Loading</button>
+        <div class="alert"><p>Berhasil</p></div>
+      </form>
+    </section>
     <footer>
-      <div class="parentfooter">
-        <div class="image"><img src="assets/XTRA8.jpeg" alt="Class Logo" /></div>
-        <div class="main-menu">
-          <h2>Main Menu</h2>
-          <ul class="menuOption">
-            <li class="menuHome"><a href="#">Home</a></li>
-            <li class="menuAbout"><a href="#">About Us</a></li>
-            <li class="menuProfile"><a href="#">Profile</a></li>
-            <li class="menuCredit"><a href="#">Credits</a></li>
-          </ul>
+      <h1><b> Extraveiganza</b></h1>
+      <h3>We Are Extraveiganza And This Our Officially Website</h3>
+      <div class="contactus-flex">
+        <div class="contact-us">
+          <div class="igs">
+            <a href="https://instagram.com/extraveiganza?utm_medium=copy_link"><img src="https://img.icons8.com/metro/26/000000/instagram-new.png" /></a>
+          </div>
+          <div class="mail">
+            <a href="mailto:xrpl8smktelkom@gmail.com?subject=Contract%20Mail&body=Hello%20XR8%20admin%2C%20I'd%20like%20to%20....." target="blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/gmail-login.png" /></a>
+          </div>
+          <div class="yt">
+            <a href="https://youtube.com/channel/UC0AD2YxXfC1cWhopOO6mseA"><img src="https://img.icons8.com/ios/30/000000/youtube-play--v1.png" /></a>
+          </div>
         </div>
       </div>
+      <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i> 2021 Made with <i class="fa-solid fa-mug-saucer"></i> By Extraveiganza Dev Teams</p>
+      </div>
     </footer>
+    <script src="https://kit.fontawesome.com/ac98c9341e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzr_HDBkZ6d1YxAl8KQzLDcv0Ix1hApMsgLuCxT53rImUpb9veSmcUrqReU0hYUl5z0/exec";
+      const form = document.forms["feedback-Users"];
+      const kirim = document.querySelector(".kirim");
+      const loading = document.querySelector(".loading");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        loading.classList.toggle("disable");
+        kirim.classList.toggle("disable");
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            loading.classList.toggle("disable");
+            kirim.classList.toggle("disable");
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
