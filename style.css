@@ -6,6 +6,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+ul {
+  padding: 0px;
+}
 /* Navbar Styling */
 ul,
 li {
@@ -240,7 +243,7 @@ section {
   width: 400px;
   height: 420px;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 10px 10px 44px #666666, -10px -10px 44px #ffffff;
+  box-shadow: 5px 10px 20px #666666, -10px -10px 20px #f8f8f8;
   border-radius: 20px;
   position: relative;
   text-align: center;
@@ -249,11 +252,10 @@ section {
 .descriptionList {
   display: flex;
   position: absolute;
-  left: 6%;
-  top: 80px;
 }
 .descriptionList li {
-  margin-right: 80px;
+  margin-right: 35px;
+  margin-left: 35px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -274,7 +276,12 @@ p.caption {
 }
 .contact {
   display: flex;
-  justify-content: space-evenly;
+}
+.contact-flex {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 30px;
 }
 .cardname .text {
 }
@@ -292,25 +299,44 @@ p.caption {
   box-sizing: border-box;
   border-radius: 20px;
 }
-.wa {
-  /* background-color: rgba(0, 255, 105, 1); */
-  /* box-shadow: 0px 0px 12px 0px rgba(0, 255, 68, 1); */
+.clicky {
+  transform: scale(1);
 }
-.ig {
-  /* background: linear-gradient(90deg, rgba(245, 255, 0, 1) 0%, rgba(239, 0, 150, 1) 100%); */
-  /* box-shadow: 0px 0px 10px 0px rgba(239, 0, 151, 1); */
+.wa,
+.ig,
+.github,
+.gmail {
+  transition: 150ms;
 }
-.github {
-  /* background-color: rgb(209, 209, 209); */
-  /* box-shadow: 0px 0px 10px 6px rgba(214, 214, 214, 0.9); */
+.wa:hover,
+.ig:hover,
+.github:hover,
+.gmail:hover {
+  transform: scale(1.3);
+}
+.wa:hover {
+  background-color: rgba(0, 255, 105, 1);
+  box-shadow: 0px 0px 12px 6px rgba(0, 255, 68, 1);
+}
+.ig:hover {
+  background: linear-gradient(90deg, rgba(245, 255, 0, 1) 0%, rgba(239, 0, 150, 1) 100%);
+  box-shadow: 0px 0px 10px 6px rgba(239, 0, 151, 1);
+}
+.github:hover {
+  background-color: rgb(209, 209, 209);
+  box-shadow: 0px 0px 10px 6px rgba(214, 214, 214, 1);
+}
+.gmail:hover {
+  background-color: rgb(177, 0, 0);
+  box-shadow: 0px 0px 10px 6px rgba(161, 0, 0, 0.9);
 }
 .card-parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: 0.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  justify-content: center;
+  justify-content: space-around;
 }
 .card1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -321,7 +347,43 @@ p.caption {
 .card3 {
   grid-area: 1 / 3 / 2 / 4;
 }
+/* Footer */
+footer {
+  width: 100vw;
+  height: 50vh;
+  background-color: rgb(250, 0, 0);
+}
+.parentfooter {
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
+  grid-template-rows: 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+}
 
+.image {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.image img {
+  width: 250px;
+  border-radius: 100%;
+}
+.main-menu {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.menuOption {
+  display: flex;
+  flex-direction: column;
+}
 /* svg Waves */
 .waves-1 {
   position: absolute;
@@ -333,6 +395,7 @@ p.caption {
 .path-2 {
   animation: pathAnim-1 4s linear infinite;
 }
+
 @keyframes pathAnim-1 {
   0% {
     d: path(

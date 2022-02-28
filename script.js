@@ -1,6 +1,7 @@
 const aboutUs = document.getElementById("about-us");
 const navbarItem = document.querySelectorAll(".container-navbar ul li a");
 const navbarSticky = document.querySelectorAll(".container-navbar");
+const clicky = document.getElementsByClassName("icon");
 $(".info-button, .about-us-button").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: $(aboutUs).offset().top - 100 }, 500);
@@ -8,6 +9,10 @@ $(".info-button, .about-us-button").on("click", function (e) {
 $(".home-button").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: $("header").offset().top }, 500);
+});
+$(".profile-button").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: $(".buAulia").offset().top - 100 }, 500);
 });
 document.addEventListener("scroll", () => {
   if (window.pageYOffset >= 90) {
@@ -28,3 +33,4 @@ document.addEventListener("scroll", () => {
     navbarSticky[0].classList.remove("animated-navbar");
   }
 });
+console.log();
