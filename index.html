@@ -242,7 +242,7 @@
         <textarea name="text" id="message" cols="30" rows="10" placeholder="Message" name="pesan"></textarea><br />
         <button type="submit" class="kirim">Submit</button>
         <button disabled="disabled" class="loading disable">Loading</button>
-        <div class="alert"><p>Berhasil</p></div>
+        <div class="alert disable"><p>Berhasil</p></div>
       </form>
     </section>
     <footer>
@@ -272,7 +272,7 @@
       const form = document.forms["feedback-Users"];
       const kirim = document.querySelector(".kirim");
       const loading = document.querySelector(".loading");
-      const alert = document.querySelector(".alert");
+      const alertt = document.querySelector(".alert");
 
       form.addEventListener("submit", (e) => {
         loading.classList.toggle("disable");
@@ -282,6 +282,8 @@
           .then((response) => {
             loading.classList.toggle("disable");
             kirim.classList.toggle("disable");
+            alertt.classList.toggle("disable");
+            form.reset();
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
