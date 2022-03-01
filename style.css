@@ -702,6 +702,9 @@ footer {
   textarea {
     width: 400px;
   }
+  .introduce {
+    margin-top: 0px;
+  }
 }
 @media only screen and (max-width: 565px) {
   input,
@@ -730,5 +733,18 @@ footer {
   }
   .card5 {
     grid-area: 5 / 1 / 6 / 2;
+  }
+  .buAulia {
+    padding: 0;
+  }
+  .buAulia img.foto-bu-aul {
+    width: 60%;
+    margin-left: -120px;
+  }
+  .foto-bu-aul {
+    text-align: center;
+  }
+  .text-buaul {
+    padding: 20px;
   }
 }
