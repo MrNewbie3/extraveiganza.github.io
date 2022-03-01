@@ -34,3 +34,26 @@ document.addEventListener("scroll", () => {
   }
 });
 console.log();
+const scriptURL = "https://script.google.com/macros/s/AKfycbzr_HDBkZ6d1YxAl8KQzLDcv0Ix1hApMsgLuCxT53rImUpb9veSmcUrqReU0hYUl5z0/exec";
+const form = document.forms["feedback-Users"];
+const kirim = document.querySelector(".kirim");
+const loading = document.querySelector(".loading");
+const alertt = document.querySelector(".alert");
+
+form.addEventListener("submit", (e) => {
+  loading.classList.toggle("disable");
+  kirim.classList.toggle("disable");
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      kirim.classList.toggle("disable");
+      alertt.classList.toggle("disable");
+      loading.classList.toggle("disable");
+      setTimeout(() => {
+        alertt.classList.toggle("disable");
+      }, 3000);
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
