@@ -91,6 +91,9 @@ header {
   top: 30%;
   text-align: center;
 }
+.title h1 {
+  margin-bottom: 30px;
+}
 .title h3 {
   margin-top: -50px;
   margin-bottom: 0px;
@@ -135,6 +138,7 @@ section {
 }
 .us {
   margin-bottom: 30px;
+  color: white;
 }
 .icon-content {
   text-align: center;
@@ -184,7 +188,7 @@ section {
 }
 
 .introduce {
-  margin-top: 100px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -211,11 +215,14 @@ section {
   position: relative;
   margin-top: -5px;
 }
+.buAulia h1 {
+  font-size: 40px;
+}
 .text-center {
   text-align: center;
 }
 .column {
-  padding-top: 70px;
+  padding-top: 20px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -229,17 +236,23 @@ section {
 }
 .foto-bu-aul {
   grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
 }
 .text-buaul {
   grid-area: 1 / 1 / 2 / 2;
 }
 /* Member Classes Section */
 .member {
-  margin-top: 150px;
   height: auto;
+  padding-top: 0px;
+  position: relative;
+  z-index: 2;
 }
 .member h1.text-center {
   font-size: 50px;
+  padding-top: 20px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 .cardname {
   width: 250px;
@@ -364,8 +377,8 @@ p.caption {
 }
 
 input {
-  margin: 10px;
-  width: 45%;
+  margin: 8px;
+  width: 100%;
   height: 30px;
   margin-bottom: 20px;
   border-radius: 6px;
@@ -432,6 +445,7 @@ footer {
   font-weight: 300;
 }
 /* svg Waves */
+
 .waves-1 {
   position: absolute;
   right: 0;
@@ -569,15 +583,6 @@ footer {
     );
   }
 }
-/* orange waves */
-.orange-waves {
-  position: absolute;
-  left: -7%;
-  width: 110vw;
-  height: 400px;
-  bottom: -20%;
-  z-index: -1;
-}
 /* Animation for button */
 @keyframes buttonUpDown {
   0% {
@@ -594,9 +599,15 @@ footer {
   .card-parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+  }
+  .about-us {
+    padding-top: 0px;
+  }
+  .introduce {
+    margin-top: 0px;
   }
 
   .card5 {
@@ -621,17 +632,24 @@ footer {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
+  h1.us {
+    margin-top: 0px;
+  }
+  .about-us {
+    padding-top: 0px;
+  }
 
   .foto-bu-aul {
     grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
   }
   .text-buaul {
     grid-area: 2 / 1 / 3 / 2;
   }
-  .orange-waves {
-    bottom: 20%;
+  .waves-1 {
+    top: 100vh;
   }
-  .member {
+  section.member {
     margin-top: -180px;
   }
 }
@@ -647,17 +665,32 @@ footer {
     grid-row-gap: 20px;
   }
   .rounded img {
-    margin-top: 20vh;
+    margin-top: 15%;
+  }
+  .member h1.text-center {
+    margin-top: 50px;
+  }
+  .buAulia {
+    padding-top: 0ch;
+  }
+  .buAulia h1 {
+    margin-top: 0px;
   }
 
   .card4 {
     grid-area: 2 / 1 / 3 / 2;
+  }
+  .icon-parent {
+    margin-top: 80px;
   }
   .card5 {
     grid-area: 2 / 2 / 3 / 3;
   }
 }
 @media only screen and (max-width: 815px) {
+  .navbar-content {
+    visibility: hidden;
+  }
   .card-parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -667,6 +700,10 @@ footer {
   }
   .rounded img {
     width: 100%;
+  }
+  .about-us {
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .card3 {
@@ -705,6 +742,12 @@ footer {
   .introduce {
     margin-top: 0px;
   }
+  .about-us {
+    padding-left: 0px;
+  }
+  .text-fill {
+    margin-left: 30px;
+  }
 }
 @media only screen and (max-width: 565px) {
   input,
@@ -737,14 +780,16 @@ footer {
   .buAulia {
     padding: 0;
   }
-  .buAulia img.foto-bu-aul {
-    width: 60%;
-    margin-left: -120px;
-  }
-  .foto-bu-aul {
+  .buAulia .foto-bu-aul {
     text-align: center;
+  }
+  .fotoBuAul {
+    width: 70%;
   }
   .text-buaul {
     padding: 20px;
+  }
+  .rounded img {
+    margin-top: 10px;
   }
 }

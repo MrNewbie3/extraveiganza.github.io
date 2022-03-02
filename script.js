@@ -12,7 +12,7 @@ $(".home-button").on("click", function (e) {
 });
 $(".profile-button").on("click", function (e) {
   e.preventDefault();
-  $("html, body").animate({ scrollTop: $(".buAulia").offset().top - 100 }, 500);
+  $("html, body").animate({ scrollTop: $(".member").offset().top - 100 }, 500);
 });
 document.addEventListener("scroll", () => {
   if (window.pageYOffset >= 90) {
