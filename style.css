@@ -37,9 +37,8 @@ li a {
 .container-navbar {
   position: relative;
   z-index: 4;
-  left: 0px;
-  right: 0px;
   top: 0px;
+  width: 100vw;
 }
 /* Animated Navbar */
 .animated-navbar {
@@ -363,7 +362,7 @@ p.caption {
 }
 
 input {
-  width: 100%;
+  width: 90%;
   height: 30px;
   margin-bottom: 20px;
   border-radius: 6px;
@@ -373,7 +372,7 @@ input {
   text-align: center;
 }
 textarea {
-  width: 100%;
+  width: 90%;
   margin-bottom: 10px;
   box-shadow: 0px 0px 5px 2px #a3a3a3;
   font-family: "Oswald";
@@ -382,9 +381,7 @@ textarea {
   padding: 10px;
   box-sizing: border-box;
 }
-form {
-  padding: 20px;
-}
+
 form .disable {
   visibility: hidden;
 }
@@ -715,11 +712,23 @@ footer {
 @media only screen and (max-width: 670px) {
   form {
     text-align: center;
+    width: 90vw;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  .forms {
+    padding: 0%;
   }
   input,
   textarea {
     width: 400px;
   }
+  div.text-fill {
+    margin-left: 0;
+    padding: 20px;
+  }
+
   .introduce {
     margin-top: 0px;
   }
@@ -819,5 +828,20 @@ footer {
   }
   .buAulia h1.text-right {
     text-align: center;
+  }
+}
+@media screen and (max-width: 430px) {
+  .forms {
+    width: 100vw;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  footer {
+    padding-top: 5px;
+  }
+  footer p {
+    margin-bottom: 0%;
   }
 }
