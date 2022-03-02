@@ -844,4 +844,22 @@ footer {
   footer p {
     margin-bottom: 0%;
   }
+  div.text-fill {
+    margin-top: -80px;
+  }
+  .buAulia {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  div.text-fill {
+    margin-top: -100px;
+  }
+  .text-buaul {
+    margin-top: -50px;
+  }
+  footer p {
+    margin-top: 0px;
+    font-size: 14px;
+  }
 }
