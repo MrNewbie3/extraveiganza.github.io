@@ -363,7 +363,6 @@ p.caption {
 }
 
 input {
-  margin: 8px;
   width: 100%;
   height: 30px;
   margin-bottom: 20px;
@@ -375,13 +374,16 @@ input {
 }
 textarea {
   width: 100%;
-  margin: 10px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 5px 2px #a3a3a3;
   font-family: "Oswald";
   border-radius: 6px;
   border: none;
   padding: 10px;
   box-sizing: border-box;
+}
+form {
+  padding: 20px;
 }
 form .disable {
   visibility: hidden;
@@ -791,6 +793,9 @@ footer {
   .buAulia .text-right {
     font-size: 35px;
   }
+  section.member {
+    margin-top: -100px;
+  }
 }
 @media only screen and (max-width: 476px) {
   header h1 {
@@ -801,7 +806,7 @@ footer {
     padding-top: 20px;
   }
   .text-fill {
-    margin-top: -100px;
+    margin-top: -40px;
   }
   .rounded {
     margin-top: 20px;
@@ -809,7 +814,10 @@ footer {
   .buAulia {
     margin-top: 60px;
   }
-  .member {
-    margin-top: -120px;
+  section.member {
+    margin-top: -70px;
+  }
+  .buAulia h1.text-right {
+    text-align: center;
   }
 }
