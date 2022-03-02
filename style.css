@@ -856,10 +856,15 @@ footer {
     margin-top: -100px;
   }
   .text-buaul {
-    margin-top: -50px;
+    margin-top: -10px;
   }
   footer p {
     margin-top: 0px;
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 344px) {
+  div.text-fill {
+    margin-top: -180px;
   }
 }
