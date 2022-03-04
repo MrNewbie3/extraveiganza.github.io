@@ -349,7 +349,7 @@ p.caption {
 .card-parent {
   display: grid;
   grid-template-columns: repeat(5, 0.5fr);
-  grid-template-rows: repeat(1, 0.5fr);
+  grid-template-rows: repeat(8, 0.5fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
